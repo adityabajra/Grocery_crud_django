@@ -5,7 +5,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import GroceryItem
 
 from django.contrib import messages
+from django.http import HttpResponse
 
+def home(request):
+    return HttpResponse("Welcome to Grocery Bud 🎉")
 
 def index(request):
     """Display all grocery items and handle edit mode"""
