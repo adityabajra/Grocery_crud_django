@@ -1,5 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import GroceryItem
+
+
 def index(request):
-    return render(request, 'grocery/index.html')
+    """Display all grocery items"""
+    items = GroceryItem.objects.all()
+    context = {
+        'items': items,
+    }
+    return render(request, 'grocery/index.html', context)
