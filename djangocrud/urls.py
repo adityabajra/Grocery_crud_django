@@ -20,7 +20,7 @@ from django.urls import path, include
 from grocery.views import home
 
 urlpatterns = [
-    path('', home),
+    
     path('admin/', admin.site.urls),
     path('grocery/', include('grocery.urls')),  
 ]
